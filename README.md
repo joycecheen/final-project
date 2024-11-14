@@ -34,7 +34,41 @@ Start off by forking this repository. In your README, write a design doc to outl
 
 Submit your Design doc as usual via pull request against this repository.
 ## Milestone 1: Implementation part 1 (due 11/13)
-Begin implementing your engine! Don't worry too much about polish or parameter tuning -- this week is about getting together the bulk of your generator implemented. By the end of the week, even if your visuals are crude, the majority of your generator's functionality should be done.
+
+We first started by following the box stacking workflow from the buildings homework
+
+https://github.com/user-attachments/assets/b372a8b8-b69d-4759-af01-740604cf8738
+
+We then made our procedurally generated partitions using the Lot Subdivision node. We had a lot of issues with getting only the inside edges (partitions) to show up, but we ended up figuring it out by creating a bounding box-ish around the border to group the outside points, converted them into edges, and used group combine to only select the inner edges.
+
+From before it was working fully:
+
+https://github.com/user-attachments/assets/ebdb3f25-51f9-419a-b597-80a5afe1be00
+
+Then we started inserting our food assets as basic boxes into the partitions. We sorted the partition areas and placed the rice in the biggest and the salad in the smallest. We are still in the process of placing our sashimi and roll assets, which we plan to do by modifying the building homework.
+
+https://github.com/user-attachments/assets/0f904178-50c0-40ca-99ab-3f107c803773
+
+Some things we want to fix in future milestones:
+- Add handles on the sides
+- Bevel the bottom
+- Bigger bento = more partitions
+- Fix divisions visible on sides
+- Height of partitions not scaling with bento height
+- Additional customizations(no rice/no sushi/etc.)
+
+Enjoy us struggling ft. the world's biggest monitor:
+
+https://github.com/user-attachments/assets/bb231604-093b-4d5a-9fcd-270ecc0513c4
+
+References:
+- https://www.youtube.com/watch?v=BClgCh_w3lo
+- Blast node: https://www.sidefx.com/docs/houdini/nodes/sop/blast.html
+- How to make partitions different every iteration:
+- https://www.reddit.com/r/Houdini/comments/1et5z2p/how_to_use_a_different_seed_for_every_iteration/
+- Lot subdivision outer edges: https://www.sidefx.com/forum/xtopic/68602/?page=1#post-291672
+  
+<img width="696" alt="Screenshot 2024-11-14 at 12 05 31 AM" src="https://github.com/user-attachments/assets/863bdf38-0a0f-4b04-878c-267610cc7f6f">
 
 Put all your code in your forked repository.
 
@@ -64,56 +98,3 @@ Submission:
   - final results with images and a live demo if possible
   - post mortem: how did your project go overall? Did you accomplish your goals? Did you have to pivot?
 
-## Topic Suggestions
-
-### Create a generator in Houdini
-
-### A CLASSIC 4K DEMO
-- In the spirit of the demo scene, create an animation that fits into a 4k executable that runs in real-time. Feel free to take inspiration from the many existing demos. Focus on efficiency and elegance in your implementation.
-- Example: 
-  - [cdak by Quite & orange](https://www.youtube.com/watch?v=RCh3Q08HMfs&list=PLA5E2FF8E143DA58C)
-
-### A RE-IMPLEMENTATION
-- Take an academic paper or other pre-existing project and implement it, or a portion of it.
-- Examples:
-  - [2D Wavefunction Collapse Pokémon Town](https://gurtd.github.io/566-final-project/)
-  - [3D Wavefunction Collapse Dungeon Generator](https://github.com/whaoran0718/3dDungeonGeneration)
-  - [Reaction Diffusion](https://github.com/charlesliwang/Reaction-Diffusion)
-  - [WebGL Erosion](https://github.com/LanLou123/Webgl-Erosion)
-  - [Particle Waterfall](https://github.com/chloele33/particle-waterfall)
-  - [Voxelized Bread](https://github.com/ChiantiYZY/566-final)
-
-### A FORGERY
-Taking inspiration from a particular natural phenomenon or distinctive set of visuals, implement a detailed, procedural recreation of that aesthetic. This includes modeling, texturing and object placement within your scene. Does not need to be real-time. Focus on detail and visual accuracy in your implementation.
-- Examples:
-  - [The Shrines](https://github.com/byumjin/The-Shrines)
-  - [Watercolor Shader](https://github.com/gracelgilbert/watercolor-stylization)
-  - [Sunset Beach](https://github.com/HanmingZhang/homework-final)
-  - [Sky Whales](https://github.com/WanruZhao/CIS566FinalProject)
-  - [Snail](https://www.shadertoy.com/view/ld3Gz2)
-  - [Journey](https://www.shadertoy.com/view/ldlcRf)
-  - [Big Hero 6 Wormhole](https://2.bp.blogspot.com/-R-6AN2cWjwg/VTyIzIQSQfI/AAAAAAAABLA/GC0yzzz4wHw/s1600/big-hero-6-disneyscreencaps.com-10092.jpg)
-
-### A GAME LEVEL
-- Like generations of game makers before us, create a game which generates an navigable environment (eg. a roguelike dungeon, platforms) and some sort of goal or conflict (eg. enemy agents to avoid or items to collect). Aim to create an experience that will challenge players and vary noticeably in different playthroughs, whether that means procedural dungeon generation, careful resource management or an interesting AI model. Focus on designing a system that is capable of generating complex challenges and goals.
-- Examples:
-  - [Rhythm-based Mario Platformer](https://github.com/sgalban/platformer-gen-2D)
-  - [Pokémon Ice Puzzle Generator](https://github.com/jwang5675/Ice-Puzzle-Generator)
-  - [Abstract Exploratory Game](https://github.com/MauKMu/procedural-final-project)
-  - [Tiny Wings](https://github.com/irovira/TinyWings)
-  - Spore
-  - Dwarf Fortress
-  - Minecraft
-  - Rogue
-
-### AN ANIMATED ENVIRONMENT / MUSIC VISUALIZER
-- Create an environment full of interactive procedural animation. The goal of this project is to create an environment that feels responsive and alive. Whether or not animations are musically-driven, sound should be an important component. Focus on user interactions, motion design and experimental interfaces.
-- Examples:
-  - [The Darkside](https://github.com/morganherrmann/thedarkside)
-  - [Music Visualizer](https://yuruwang.github.io/MusicVisualizer/)
-  - [Abstract Mesh Animation](https://github.com/mgriley/cis566_finalproj)
-  - [Panoramical](https://www.youtube.com/watch?v=gBTTMNFXHTk)
-  - [Bound](https://www.youtube.com/watch?v=aE37l6RvF-c)
-
-### YOUR OWN PROPOSAL
-- You are of course welcome to propose your own topic . Regardless of what you choose, you and your team must research your topic and relevant techniques and come up with a detailed plan of execution. You will meet with some subset of the procedural staff before starting implementation for approval.
