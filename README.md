@@ -60,12 +60,12 @@ https://github.com/user-attachments/assets/bb231604-093b-4d5a-9fcd-270ecc0513c4
 
 ### Creating Rice
 Used scatter node to create points, and attribute randomize to randomize the normals, and then copy to points to place individual rice grains.
-![Screen Recording 2024-12-04 at 9 45 58 AM](https://github.com/user-attachments/assets/d253cd2f-09e4-41c1-aa6e-1170a681614b)
+
 
 
 ### Filling Largest and Smallest Partitions
 Filled largest partition with rice, and smallest partition with soup using mountain node.
-![image](https://github.com/user-attachments/assets/9f31bf19-cdc7-4c7e-adba-255e05560e3b)
+![Screen Recording 2024-12-04 at 10 18 13 AM](https://github.com/user-attachments/assets/efdf4eb8-d52b-46de-a082-6890772ba326)
 
 Placing the sushi rolls and sashimi:
 - Lots of trial and error with trying to place the roll and sashimi, but we ended up using the Lot Subdivision node again to divide each partition, and then we separated these divisions into their own primitives and iterated through them with a for each loop. Within the loop we used a matchSize node to match either the roll or the sashimi to the size of the division. We randomized which roll or sashimi was placed within the switch node
