@@ -69,8 +69,34 @@ References:
 
 ## Milestone 2: 
 
+Placing the sushi rolls and sashimi:
+- Lots of trial and error with trying to place the roll and sashimi, but we ended up using the Lot Subdivision node again to divide each partition, and then we separated these divisions into their own primitives and iterated through them with a for each loop. Within the loop we used a matchSize node to match either the roll or the sashimi to the size of the division. We randomized which roll or sashimi was placed within the switch nod
 
 
 ## Milestone 3:
+
+Optimizations:
+- Thanks to the critique, we realized the inside of our box shape from before didn’t have any faces because of how we were extruding, so we changed the logic so that the box has thickness
+- Added outer box and handles and beveled the bottom to match our reference images better
+- Our previous logic for rice was slowing down our file considerably, so we changed it so that we were only generating rice on the top face of the rice box and created a white box directly under so any gaps between rice pieces would still appear white
+- Changed the logic so that the partitions to get the faces that we put the food geometry on are now made from the boolean of bottom face and the inner partitions so they’re exactly the same
+- The density of the rice scales with the dimensions of the bento box so that it doesn’t become too sparse when the box is larger
+- Rotated each sashimi piece so that its longest edge aligned with the longest edge of the sashimi box
+
+We then prepared for our final output by adding a camera and lighting (area light, ambient light, and sky light) to match our reference images as closely as possible. 
+
+
+Finally, we rendered our final images using Mantra!
+
+
+## Closing Thoughts:
+
+Overall, we think the project went well! There was a lot of back and forth where we were trying different ways to implement parts, especially like when we were trying to get the inner edges of the lot subdivision to show up for the partitions, but that just meant we got to familiarize ourselves with more of Houdini’s functionalities! Shoutout Simon Houdini.
+
+Did you accomplish your goals? Did you have to pivot?
+- Accomplished our goal of a bento box generator
+- Although we wanted our final product to be an animation originally, we struggled with figuring out what exactly to animate, so we chose to render stills instead, but we're still happy with this output!
+- Things we could add in future: textures, more user control over bento box customization (choose which sushi goes where, etc.)
+
 
 
