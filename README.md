@@ -57,13 +57,6 @@ Some things we want to fix in future milestones:
 Enjoy us struggling ft. the world's biggest monitor:
 
 https://github.com/user-attachments/assets/bb231604-093b-4d5a-9fcd-270ecc0513c4
-
-References:
-- https://www.youtube.com/watch?v=BClgCh_w3lo
-- Blast node: https://www.sidefx.com/docs/houdini/nodes/sop/blast.html
-- How to make partitions different every iteration:
-- https://www.reddit.com/r/Houdini/comments/1et5z2p/how_to_use_a_different_seed_for_every_iteration/
-- Lot subdivision outer edges: https://www.sidefx.com/forum/xtopic/68602/?page=1#post-291672
   
 <img width="696" alt="Screenshot 2024-11-14 at 12 05 31 AM" src="https://github.com/user-attachments/assets/863bdf38-0a0f-4b04-878c-267610cc7f6f">
 
@@ -88,6 +81,17 @@ We then prepared for our final output by adding a camera and lighting (area ligh
 
 Finally, we rendered our final images using Mantra!
 
+References:
+- https://www.youtube.com/watch?v=BClgCh_w3lo
+- Blast node: https://www.sidefx.com/docs/houdini/nodes/sop/blast.html
+- How to make partitions different every iteration:
+- https://www.reddit.com/r/Houdini/comments/1et5z2p/how_to_use_a_different_seed_for_every_iteration/
+- Lot subdivision outer edges: https://www.sidefx.com/forum/xtopic/68602/?page=1#post-291672
+
+- https://www.youtube.com/watch?v=ewXiWafJ4PE
+- https://www.youtube.com/watch?v=sO-mDdJBaVI
+- https://www.sidefx.com/forum/topic/75649/?page=1#post-323614
+- https://www.youtube.com/watch?v=HVFcjxk71Yo&t=49s
 
 ## Closing Thoughts:
 
